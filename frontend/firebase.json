@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      { "source": "/api/**", "run": { "serviceId": "bcv-api", "region": "asia-south1" } },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
+}

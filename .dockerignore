@@ -1,0 +1,9 @@
+frontend
+deploy
+**/node_modules
+**/__pycache__
+Backend/.env
+Backend/.venv
+Backend/contracts/cache
+Backend/tests
+.git

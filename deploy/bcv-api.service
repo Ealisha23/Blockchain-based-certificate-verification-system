@@ -1,0 +1,13 @@
+[Unit]
+Description=Certificate Verification API (gunicorn)
+After=network.target mysql.service
+
+[Service]
+User=bcv
+WorkingDirectory=/opt/bcv/Backend
+EnvironmentFile=/opt/bcv/Backend/.env
+ExecStart=/opt/bcv/Backend/.venv/bin/gunicorn -w 3 -b 127.0.0.1:5000 app.api.v1.app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
